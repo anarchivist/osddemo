@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <link rel='stylesheet' 
+          type='text/css'
+          media='screen'
+          href='http://openseadragon.github.io/css/style.css'/>
+
+    <script src="http://openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
+</head>
+
+<body>
+
+    <div id="osddemo" style="width: 800px; height: 600px"></div>
+
+<script type="text/javascript">
+    // Example
+    OpenSeadragon({
+        id:              "osddemo",
+        prefixUrl:       "http://openseadragon.github.io/openseadragon/images/",
+        tileSources: {
+            type: 'legacy-image-pyramid',
+            levels:[{
+                url: '/exhibitions/files/original/c41c5781feba5e4eba77d0fec03dd3d9.png',
+                height: 2058,
+                width: 3360
+            }, {
+                url: '/exhibitions/files/fullsize/c41c5781feba5e4eba77d0fec03dd3d9.jpg',
+                height: 800,
+                width: 800
+            }, {
+                url: '/exhibitions/files/thumbnails/c41c5781feba5e4eba77d0fec03dd3d9.jpg',
+                height: 123,
+                width: 200
+            }
+            ]
+        },
+        showNavigator:   true, 
+        debugMode:       false,
+        //debugGridColor:  "#f9276f",
+        //minZoomImageRatio: 0,
+        //maxZoomPixelRatio: 10000
+    });
+</script>
+
+</body>
+</html>
